@@ -15,13 +15,20 @@
             background-color: #f8f8f8;
             font-family: Arial, sans-serif;
         }
-        iframe {
+        .pdf-container {
             width: 100%;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        object {
+            width: 95%;
+            height: 95vh;
             border: none;
         }
         @media only screen and (min-width: 768px) {
-            iframe {
+            object {
                 width: 80%;
                 height: 90vh;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -29,7 +36,7 @@
             }
         }
         @media only screen and (min-width: 1024px) {
-            iframe {
+            object {
                 width: 70%;
                 height: 85vh;
             }
@@ -37,6 +44,10 @@
     </style>
 </head>
 <body>
-    <iframe src="CV.pdf" title="Mohammad Zentari CV"></iframe>
+    <div class="pdf-container">
+        <object data="CV.pdf" type="application/pdf" title="Mohammad Zentari CV">
+            <p>Your browser does not support PDFs. <a href="CV.pdf">Download the PDF</a> to view it.</p>
+        </object>
+    </div>
 </body>
 </html>
